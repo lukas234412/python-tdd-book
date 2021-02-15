@@ -3,9 +3,8 @@ from fabric.contrib.files import append, exists
 from fabric.api import cd, env, local, run
 
 REPO_URL = 'https://github.com/lukas234412/python-tdd-book'
-env.user = "ubuntu"
-env.key_filename = ["C:\python37\AWS_EC2_instance_for_TDD.pem"]
-env.hosts = ["superlists-staging.blaskar.eu"]
+env.user = "lukas234412"
+env.hosts = ["supetlists-staging.blaskar.eu"]
 
 def deploy():
 	site_folder = f'/home/{env.user}/sites/{env.host}'
