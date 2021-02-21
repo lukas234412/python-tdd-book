@@ -59,7 +59,7 @@ class ItemValidationTest(FunctionalTest):
 		self.get_item_input_box().send_keys('Buy wellies')
 		self.get_item_input_box().send_keys(Keys.ENTER)
 		
-		# She sees a helpfull error message
+		# She sees a helpful error message
 		self.wait_for(lambda: self.assertEqual(
 			self.get_error_element().text,
 			"You've already got this in your list"
