@@ -18,8 +18,10 @@
                     <p> Logged in as {{ user.email }}</p>
                     <p><a id="id_logout" href="{% url 'logout' %}">Logout</a></p>
                 {% else %}
-                    <form method="POST " action="{% url 'send_login_email' %}">
-                        Enter email to log in: <input name="email" type="text" />
+                    <form method="POST" action="{% url 'send_login_email' %}">
+                        Enter email to log in: <label>
+                        <input name="email" type="text" />
+                    </label>
                         {% csrf_token %}
                     </form>
                 {% endif %}
@@ -50,8 +52,8 @@
 			</div>
 
 		</div>
-	<script src="/static/jquery-3.3.1.min.js"></script>
-    <script src="/static/list.js"></script>
+	<script src="../static/jquery-3.3.1.min.js"></script>
+    <script src="../static/list.js"></script>
 
     <script>
         $(document).ready(function (){
